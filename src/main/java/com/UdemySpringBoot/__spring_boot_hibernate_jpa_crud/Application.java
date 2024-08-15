@@ -1,7 +1,9 @@
 package com.UdemySpringBoot.__spring_boot_hibernate_jpa_crud;
 
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class Application {
@@ -10,4 +12,11 @@ public class Application {
 		SpringApplication.run(Application.class, args);
 	}
 
+	@Bean
+	public CommandLineRunner commandLineRunner(String[] args) {
+
+		return runner -> {
+			System.out.println("Hello world");
+		};
+	}
 }
